@@ -1,0 +1,29 @@
+.timer {
+  text-align: center;
+}
+
+.time {
+  color: #e7eced;
+  font-size: 72px;
+}
+
+.button {
+  background-color: #ffd248;
+  border-radius: 15px;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 47px;
+}
+
+.button:hover {
+  background-color: #fdd660;
+}
+
+.button:active {
+  position: relative;
+  top: 1px;
+}
