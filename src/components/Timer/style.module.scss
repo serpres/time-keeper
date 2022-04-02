@@ -1,10 +1,20 @@
+@import "../../views/styles/variables.scss";
+
 .timer {
   text-align: center;
 }
 
 .time {
+  padding: 5px;
   color: #e7eced;
   font-size: 72px;
+  background: rgba($color-background-paper, 0.35);
+  border-radius: 30px;
+
+  box-shadow: 0 8px 32px 0 rgba($color-background-paper, 0.35);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border-radius: 10px;
 }
 
 .button {
