@@ -1,16 +1,18 @@
+@import '@view/styles';
+
 .AppHeader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 32px;
-  margin-top: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 32px;
+	margin-top: 1rem;
 }
 .logotypeSvg {
-  width: 200px;
+	width: 200px;
 }
 .title {
-  font-family: "Dancing Script", cursive;
-  font-weight: bold;
-  color: #e7eced;
+	font-family: $DancingScript, cursive;
+	font-weight: bold;
+	color: #e7eced;
 }
