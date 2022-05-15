@@ -1,0 +1,11 @@
+@mixin default-shadow {
+	box-shadow: 2px 3px 6px 0px rgba(62, 66, 66, 0.9);
+}
+
+@mixin light-shadow {
+	box-shadow: 2px 3px 6px 0px rgba(62, 66, 66, 0.2);
+}
+
+@mixin text-shadow {
+	text-shadow: 3px 2px 4px rgba(62, 66, 66, 0.5);
+}

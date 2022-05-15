@@ -1,83 +1,70 @@
+@import '../../views/styles';
+
+.container {
+	padding: 10px;
+	border-radius: 10px;
+	text-align: center;
+}
+
 .not_active {
-  background: #ccc;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  padding: 15px 0;
-  margin-top: 15px;
-  border: 2px dashed #ccc;
-  color: white;
-  opacity: 0.2;
+	background: #ccc;
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	padding: 15px 0;
+	margin-top: 15px;
+	border: 2px dashed #ccc;
+	color: white;
+	opacity: 0.2;
 }
 
 .quest {
-  background: #9f30e3;
-  borderradius: 30px;
-  text-align: center;
-}
-
-body {
-  padding: 40px;
+	background: $color-epic;
+	text-align: center;
 }
 
 .quest {
-  position: relative;
-  background-color: #aaa;
-
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  padding: 20px 40px;
-  text-shadow: 0 0 15px hsla(0, 0%, 100%, 1),
-    /* bloom */ 0 2px 4px hsla(0, 0%, 0%, 0.7); /* drop shadow */
-  border: none;
-  border-radius: 50px;
-  margin: 10px;
-  cursor: pointer;
-  transition: transform 0.1s, box-shadow 0.1s;
-
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-
-  box-shadow: inset 0 -5px 20px hsla(0, 0%, 0%, 0.4),
-    /* top light */ inset 0 5px 20px hsla(0, 0%, 100%, 0.4),
-    /* bottom shadow */ /* multiple light sources yall */ -12px 12px 5px hsla(0, 0%, 0%, 0.15),
-    /* drop shadow 1 */ 10px 25px 10px hsla(0, 0%, 0%, 0.2); /* drop shadow 2 */
+	@include light-shadow;
+	position: relative;
+	background-color: #aaa;
+	font-size: 22px;
+	font-weight: bold;
+	color: white;
+	padding: 20px 40px;
+	text-shadow: 0 0 15px hsla(0, 0%, 100%, 1), 0 2px 4px hsla(0, 0%, 0%, 0.7);
+	border: none;
+	border-radius: 50px;
+	margin: 10px;
+	cursor: pointer;
+	transition: transform 0.1s, box-shadow 0.1s;
+	backdrop-filter: blur(7px);
 }
 
-/* highlight */
 .quest:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  top: 5px;
-  height: 30px;
-  border-radius: 15px;
-  background: linear-gradient(hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 100%, 0));
+	content: '';
+	display: block;
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: 5px;
+	height: 30px;
+	border-radius: 15px;
+	background: linear-gradient(hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 100%, 0));
 }
 
 .quest__epic {
-  background-color: rgba(#9f30e3, 0.5);
-  box-shadow: 0 8px 15px 0 rgba(#9f30e3, 0.7);
+	background-color: rgba($color-epic, 0.9);
+	box-shadow: 0 8px 15px 0 rgba($color-epic, 0.8);
 }
 .quest__rare {
-  background-color: #0d6fc5;
-  box-shadow: 0 8px 15px 0 rgba(#0d6fc5, 0.7);
+	background-color: $color-rare;
+	box-shadow: 0 8px 15px 0 rgba($color-rare, 0.8);
 }
 .quest__uncommon {
-  background-color: rgba(#2eeb24, 0.2);
-  // box-shadow: 0 8px 15px 0 rgba(#2eeb24, 0.3);
+	background-color: rgba($color-uncommon, 0.8);
+	box-shadow: 0 8px 15px 0 rgba($color-uncommon, 0.8);
 }
 .quest__common {
-  background-color: #e21;
-}
-
-.quest:hover {
-  transform: scale(1.05);
-  box-shadow: inset 0 -5px 20px hsla(0, 0%, 0%, 0.4),
-    /* top light */ inset 0 5px 20px hsla(0, 0%, 100%, 0.4),
-    /* bottom shadow */ /* multiple light sources yall */ -12px 12px 5px hsla(0, 0%, 0%, 0.15),
-    /* drop shadow 1 */ 10px 25px 10px hsla(0, 0%, 0%, 0.2); /* drop shadow 2 */
+	background-color: rgba($color-common, 0.8);
+	box-shadow: 0 8px 15px 0 rgba($color-common, 0.8);
 }

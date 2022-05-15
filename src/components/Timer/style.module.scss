@@ -1,39 +1,19 @@
-@import "../../views/styles/variables.scss";
+@import '../../views/styles/';
 
 .timer {
-  text-align: center;
+	text-align: center;
 }
 
 .time {
-  padding: 5px;
-  color: #e7eced;
-  font-size: 72px;
-  background: rgba($color-background-paper, 0.35);
-  border-radius: 30px;
-
-  box-shadow: 0 8px 32px 0 rgba($color-background-paper, 0.35);
-  backdrop-filter: blur(2.5px);
-  -webkit-backdrop-filter: blur(2.5px);
-  border-radius: 10px;
-}
-
-.button {
-  background-color: #ffd248;
-  border-radius: 15px;
-  text-transform: uppercase;
-  display: inline-block;
-  cursor: pointer;
-  color: #000;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 12px 47px;
-}
-
-.button:hover {
-  background-color: #fdd660;
-}
-
-.button:active {
-  position: relative;
-  top: 1px;
+	@include default-shadow;
+	user-select: none;
+	font-size: $sz-xl;
+	background-color: $color-background-default;
+	color: $color-secondary-contrast-text;
+	border-radius: $sz-md;
+	padding: $sz-md;
+	span {
+		display: inline-block;
+		width: 13%;
+	}
 }

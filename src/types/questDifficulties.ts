@@ -1,1 +1,1 @@
-export type TQuestDifficulties = "COMMON" | "UNCOMMON" | "RARE" | "EPIC";
+export type TQuestDifficulties = 'COMMON' | 'UNCOMMON' | 'RARE' | 'EPIC';

@@ -1,2 +1,47 @@
+@import '../../../views/styles/';
+
 .button {
+	@include default-shadow;
+	position: relative;
+	cursor: pointer;
+	line-height: 1.5;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	min-width: 64px;
+	font-size: 18px;
+	margin: 0 $sz-sm;
+	backdrop-filter: blur(2px) saturate(100%);
+	-webkit-backdrop-filter: blur(2px) saturate(100%);
+
+	border-radius: 12px;
+	border: 1px solid $color-background-paper;
+	transition: ease 0.3s;
+
+	&__primary {
+		color: $color-primary-contrast-text;
+		background-color: $color-primary-dark;
+		&:hover {
+			background-color: $color-primary-light;
+		}
+	}
+
+	&__secondary {
+		background-color: $color-background-default;
+		color: $color-secondary-contrast-text;
+		&:hover {
+			box-shadow: 2px 4px 6px 0px rgba(62, 66, 66, 0.9);
+			transform: translateY(-5%);
+		}
+	}
+
+	&__default-size {
+		padding: 10px 40px;
+	}
+
+	&__outlined {
+		border: 1px solid $color-primary-main;
+	}
+}
+
+.secondary {
 }

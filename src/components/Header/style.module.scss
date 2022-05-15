@@ -1,4 +1,4 @@
-@import '@view/styles';
+@import '../../views/styles';
 
 .AppHeader {
 	display: flex;
@@ -9,10 +9,14 @@
 	margin-top: 1rem;
 }
 .logotypeSvg {
-	width: 200px;
+	width: 150px;
+	box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.6);
+	border-radius: 100%;
 }
 .title {
+	user-select: none;
 	font-family: $DancingScript, cursive;
 	font-weight: bold;
-	color: #e7eced;
+	color: $color-primary-main;
+	text-shadow: 2px 2px 2px $color-primary-dark;
 }

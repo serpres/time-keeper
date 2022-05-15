@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import Button from '@components/Common/Button';
+
 import s from './style.module.scss';
 
 const Timer = () => {
@@ -21,39 +23,36 @@ const Timer = () => {
 	return (
 		<div className={s.timer}>
 			<h2 className={s.time}>
-				<span>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
-				<span>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}</span>
+				<span>{('0' + Math.floor((time / 60000) % 60)).slice(-2, -1)}</span>
+				<span>{('0' + Math.floor((time / 60000) % 60)).slice(-1)}</span>
+				<span>:</span>
+				<span>{('0' + Math.floor((time / 1000) % 60)).slice(-2, -1)}</span>
+
+				<span>{('0' + Math.floor((time / 1000) % 60)).slice(-1)}</span>
 			</h2>
 			{!timerOn && time === 0 && (
-				<button
-					className={s.button}
+				<Button
 					onClick={() => {
 						setTimeOn(true);
 						setStartTime(Date.now());
 					}}
 				>
 					Start
-				</button>
+				</Button>
 			)}
-			{timerOn && (
-				<button className={s.button} onClick={() => setTimeOn(false)}>
-					Stop
-				</button>
-			)}
+			{timerOn && <Button onClick={() => setTimeOn(false)}>Stop</Button>}
 			{!timerOn && time !== 0 && (
-				<button
-					className={s.button}
+				<Button
 					onClick={() => {
 						setStartTime(Date.now() - time);
 						setTimeOn(true);
 					}}
 				>
 					Resume
-				</button>
+				</Button>
 			)}
 			{time !== 0 && (
-				<button
-					className={s.button}
+				<Button
 					onClick={() => {
 						setTimeOn(false);
 						setStartTime(Date.now());
@@ -61,7 +60,7 @@ const Timer = () => {
 					}}
 				>
 					Reset
-				</button>
+				</Button>
 			)}
 		</div>
 	);

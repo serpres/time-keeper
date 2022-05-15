@@ -1,0 +1,19 @@
+@import '../../../views/styles/';
+
+.typography {
+	@include text-shadow;
+	display: inline;
+	margin: 0;
+}
+
+.p {
+	font-size: $sz-md;
+}
+
+.h1 {
+	font-size: $sz-lg;
+}
+
+.paragraph {
+	display: block;
+}

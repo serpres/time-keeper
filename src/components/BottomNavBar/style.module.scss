@@ -1,46 +1,40 @@
-@import "../../views/styles/variables.scss";
+@import '../../views/styles';
 .container {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .nav {
-  position: fixed;
-  border-radius: 10px;
-  bottom: 20px;
-  top: auto;
-  width: 95%;
-  height: 55px;
-  display: flex;
-  overflow-x: auto;
-
-  backdrop-filter: blur(5px) saturate(100%);
-  -webkit-backdrop-filter: blur(5px) saturate(100%);
-  background-color: rgba($color-secondary-dark, 0.4);
-  border-radius: 12px;
-  border: 1px solid rgba($color-secondary-contrast-text, 0.2);
+	@include default-shadow;
+	display: flex;
+	position: fixed;
+	bottom: 20px;
+	top: auto;
+	width: 95%;
+	height: 55px;
+	overflow-x: auto;
+	backdrop-filter: blur(5px) saturate(100%);
+	background-color: $color-background-paper;
+	border-radius: 15px;
+	border: 1px solid rgba($color-background-default, 0.2);
 }
 
 .nav__link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  min-width: 50px;
-  overflow: hidden;
-  white-space: nowrap;
-  color: #fff;
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-  transition: background-color 0.1s ease-in-out;
-  // background-color: $color-secondary-dark;
-}
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	overflow: hidden;
+	white-space: nowrap;
+	color: $color-secondary-contrast-text;
+	text-decoration: none;
+	transition: background-color 0.1s ease-in-out;
 
-.nav__link:hover {
-  background-color: rgba($color-secondary-main, 0.3);
-}
-
-.nav__link--active {
-  color: #009578;
+	&:hover {
+		background-color: rgba($color-background-default, $opacity-medium);
+	}
+	&--active {
+		background-color: rgba($color-background-default, $opacity-medium);
+		color: $color-primary-main;
+	}
 }

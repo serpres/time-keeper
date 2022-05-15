@@ -1,0 +1,10 @@
+@import '../../styles';
+
+.appContainer {
+	@include light-shadow;
+	margin-top: $sz-lg;
+	background-color: $color-secondary-contrast-text;
+	border: 1px solid rgba($color-background-paper, 0.2);
+	padding: $sz-lg;
+	border-radius: $sz-sm;
+}
