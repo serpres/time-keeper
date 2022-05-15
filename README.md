@@ -1,6 +1,7 @@
 # Time keeper
 
 Gamified timer app.
+![Time Keeper App](https://i.imgur.com/jHFGf3q.png)
 
 ### `npm start`
 
